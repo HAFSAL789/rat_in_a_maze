@@ -30,9 +30,9 @@ Each colored grid is labeled with a number representing step precedence.
 
 # Settings #
 - **Gear icon** -- To change board settings.
-- **W** -- press *W* to to create a new "allowed path" grid.
-- **r** -- press *r* to change destination.
-- **b** -- press *b* to create a new *barrier*,"wall" or "block".
+- **W** -- press "*W*" to to create a new "allowed path" grid.
+- **r** -- press "*r*" to change destination.
+- **b** -- press "*b*" to create a new "barrier", "wall" or "block".
 
 # Warning #
 1) You can change the board size, default is 10*10 (increasing higher than 15 is not recommended).
