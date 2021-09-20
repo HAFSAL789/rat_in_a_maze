@@ -43,7 +43,7 @@ Each colored grid is labeled with a number representing step precedence.
 
 # Warning #
 1) You can change the board size, default is 10*10 (increasing higher than 15 is not recommended).
-2) If your maze has more than 2222 paths, takes time a huge amount of time to calculate(so now it's not recommended to implement a maze that needs high looping, it will be solved after implementing the same algorithm with *yield*).
+2) If your maze has more than 2222(only tested upto 2228) paths, takes time a huge amount of time to calculate(so now it's not recommended to implement a maze that needs high looping, it will be solved after implementing the same algorithm with *yield*).
 3) Changing board size will not adjust the main menu (not recommended).
 
 Thanks.
