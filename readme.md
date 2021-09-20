@@ -2,7 +2,10 @@
  Used to find different paths into a destination.
  
 # Installation #
- 1)git clone ``
+ 1)git clone `https://github.com/HAFSAL789/rat_in_a_maze.git`.
+ 2)For windows - install via installer or open "*.exe*".
+ 3)For Linux - open "*.exe*".
+
 # Algorithm Techniques #
  - Recursion
  - Backtracking
@@ -30,7 +33,7 @@ Show the colored path to the destination(red colored).
 Each colored grid is labeled with a number representing step precedence.
 -**->** press "*right arrow*" keys or **space bar** to show next path.
 -if there is no new path,the boardmenu is returned back to mainmenu.
-- **Esc** -- To go back to main menu
+- **Esc** -- To go back to main menu.
 
 # Settings #
 - **Gear icon** -- To change board settings.
