@@ -1,5 +1,5 @@
 # Rat in a maze #
- Used to find different paths into a destination
+ Used to find different paths into a destination.
  
 # Algorithm Techniques #
  - Recursion
@@ -8,14 +8,24 @@
  Python, Pygame
  
 # Instruction #
-choose .exe file from windows/linux folder
+choose .exe file from windows/linux folder.
 - You can choose three different modes from main menu:   
-        1. Short -- To find Shortest Path  
-        2. Normal -- To find all different Path  
-        3. Longest -- To find the longest path  
+        1. Short -- To find Shortest Path.
+        2. Normal -- To find all different Path.  
+        3. Longest -- To find the longest path.  
 
 - **Start** -- Start the game
----
+# Board Colors #
+**Black** -- represents  "barrier","wall","block".
+**
+
+# Board Menu #
+Show the colored path to the destination(red colored).
+Each colored grid is labeled with a number representing step precedence.
+-**->** press right arrow keys or **space bar** to show next path.
+-if there is no new path,the boardmenu is returned back to mainmenu.
 - **Esc** -- To go back to main menu
-- **Gear icon** -- To change board settings
-- 
+
+# Settings #
+- **Gear icon** -- To change board settings.
+- **W** -- press "W" to  
