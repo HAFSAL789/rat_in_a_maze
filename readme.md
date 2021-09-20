@@ -16,8 +16,9 @@ choose .exe file from windows/linux folder.
 
 - **Start** -- Start the game
 # Board Colors #
-**Black** -- represents  "barrier","wall","block".
-**
+     1. **Black** -- represents  "barrier","wall","block".
+     2. **White** -- represnts "allowed Way".
+     3. **Red** -- represents "destination".
 
 # Board Menu #
 Show the colored path to the destination(red colored).
