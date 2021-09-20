@@ -13,3 +13,9 @@ choose .exe file from windows/linux folder
         1. Short -- To find Shortest Path  
         2. Normal -- To find all different Path  
         3. Longest -- To find the longest path  
+
+- **Start** -- Start the game
+---
+- **Esc** -- To go back to main menu
+- **Gear icon** -- To change board settings
+- 
