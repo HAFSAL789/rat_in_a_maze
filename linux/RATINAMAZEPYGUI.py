@@ -4,12 +4,15 @@ import os
 
 
 # to color grids
-def grid_coloring(length, color, color2, color3, screen):
+def grid_coloring(length, color, color2, color3, color4, screen):
     for i in range(length):
         for j in range(length):
             # black for blocks
             if maze[i][j] == 0:
                 globals()[f"rect{i}{j}"] = pygame.draw.rect(screen, color, ((50 * j) + 1, (50 * i), 48, 48))
+            # blue for starting point
+            elif i == start_x and j == start_y:
+                globals()[f"rect{i}{j}"] = pygame.draw.rect(screen, color4, ((50 * j) + 1, (50 * i), 48, 48))
             # red for destination
             elif i == destination_X and j == destination_Y:
                 globals()[f"rect{i}{j}"] = pygame.draw.rect(screen, color3, ((50 * j) + 1, (50 * i), 48, 48))
@@ -78,7 +81,7 @@ def full_path(screen):
         max_val = max(pathlist)
 
         # to color over previously printed path
-        grid_coloring(length, (0, 0, 0), (255, 255, 255), (255, 0, 0), screen)
+        grid_coloring(length, (0, 0, 0), (255, 255, 255), (255, 0, 0), (0, 0, 255), screen)
 
         # to print path
         print_logic(max_val, paths, screen)
@@ -117,6 +120,10 @@ def print_logic(max_val, paths, screen):
                 if row == destination_X and pos == destination_Y:
                     pygame.draw.rect(screen, (255, 0, 0), ((50 * pos) + 1, (50 * row), 48, 48))
                     screen.blit(title_rendered, ((50 * pos) + 1, (50 * row)))
+                # to print in blue
+                elif row == start_x and pos == start_y:
+                    pygame.draw.rect(screen, (0, 0, 255), ((50 * pos) + 1, (50 * row), 48, 48))
+                    screen.blit(title_rendered, ((50 * pos) + 1, (50 * row)))
                 # to print in (54, 139, 133)
                 else:
                     pygame.draw.rect(screen, (54, 139, 133), ((50 * pos) + 1, (50 * row), 48, 48))
@@ -134,7 +141,7 @@ def mazeboard(setting_type, maze):
     global visited_maze
     screen = mazeboard_display()
     screen.fill((178, 190, 181))
-    grid_coloring(length, (0, 0, 0), (255, 255, 255), (255, 0, 0), screen)
+    grid_coloring(length, (0, 0, 0), (255, 255, 255), (255, 0, 0), (0, 0, 255), screen)
     # pygame.display.update()
 
     # reset paths to null list on clicking start
@@ -249,7 +256,7 @@ def mainfun():
                     running = True
                     while running:
                         # color settings grid
-                        grid_coloring(length, (0, 0, 0), (255, 255, 255), (255, 0, 0),
+                        grid_coloring(length, (0, 0, 0), (255, 255, 255), (255, 0, 0), (0, 0, 255),
                                       settings_screen)
                         x, y = pygame.mouse.get_pos()
 
@@ -275,6 +282,13 @@ def mainfun():
                                                 destination_X, destination_Y = i, j
                                                 maze[destination_X][destination_Y] = 1
                                                 maze[old_x][old_y] = 0
+                                            # s for blue
+                                            if event.key == pygame.K_s:
+                                                global start_x, start_y
+                                                old_start_x, old_start_y = start_x, start_y
+                                                start_x, start_y = i, j
+                                                maze[start_x][start_y] = 1
+                                                maze[old_start_x][old_start_y] = 0
                                             # w for white
                                             if event.key == pygame.K_w:
                                                 maze[i][j] = 1
