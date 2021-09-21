@@ -27,6 +27,7 @@ choose .exe file from windows/linux folder.
      2. "*White*" -- represnts "*allowed Way*".
      3. "*Red*" -- represents "*destination*".
      4. "*Teal*" -- represents the path.
+     5. "*Blue*" -- represents the "starting point".
 
 # Board Menu #
 Show the colored path to the destination(red-colored).
@@ -40,11 +41,12 @@ Each colored grid is labeled with a number representing step precedence.
 - **W** -- press "*W*" to to create a new "*allowed path*" grid.
 - **r** -- press "*r*" to change destination.
 - **b** -- press "*b*" to create a new "*barrier*", "*wall*" or "*block*".
+- **s** -- press "*s*" to change the starting point.
 
 # Warning #
 1) You can change the board size, default is 10*10 (increasing higher than 15 is not recommended).
 2) If your maze has more than 2222(only tested upto 2228) paths, takes time a huge amount of time to calculate(so now it's not recommended to implement a maze that needs high looping, it will be solved after implementing the same algorithm with *yield*).
 3) Changing board size will not adjust the main menu (not recommended).
-4) You can change the starting points by changing "*start_x*" and "*start_y*" variables.
+4) ~~You can change the starting points by changing "*start_x*" and "*start_y*" variables~~(Now you can change starting points using **S**).
 
 Thanks.
