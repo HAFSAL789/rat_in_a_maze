@@ -8,7 +8,6 @@
 
 # Algorithm Techniques #
  - Recursion
- - Backtracking
  
 # Language and Libraries #
  Python 3.9.2, Pygame 2.0.1
